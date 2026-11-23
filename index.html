@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abdur Rahman | GIS Analyst, Zoning Analyst, Remote Sensing Analyst</title>
+<meta name="description" content="Portfolio of Abdur Rahman: zoning and parcel data, remote sensing, geospatial analysis and GIS automation. Maps, projects and experience.">
+<meta name="theme-color" content="#08201a">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#08201a;--bg2:#0c2a22;--card:#0f3228;--line:#1f4d3f;--tx:#e8f2ec;--mu:#9db8ac;--am:#f0b44c;--mi:#7fd1ae;
+--d:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;--b:'Instrument Sans','Segoe UI',system-ui,sans-serif;--m:'IBM Plex Mono',ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--tx);font:17px/1.65 var(--b);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}a{color:inherit}:focus-visible{outline:3px solid var(--am);outline-offset:3px;border-radius:4px}
+.w{width:min(1180px,92vw);margin-inline:auto}section{padding:92px 0}section:nth-of-type(even){background:var(--bg2)}
+h2{font:800 clamp(2rem,4.2vw,3rem)/1.05 var(--d);letter-spacing:-.02em}.lead{color:var(--mu);margin:12px 0 38px;max-width:46em;font-size:1.08rem}
+h3{font:600 1.25rem/1.25 var(--d)}
+.nav{position:fixed;inset:0 0 auto;z-index:50;background:rgba(8,32,26,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .w{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 1.02rem var(--d)}.logo i{font-style:normal;background:var(--am);color:#241703;border-radius:8px;padding:3px 7px;font-size:.85rem}
+.nav ul{display:flex;gap:18px;list-style:none;font-size:.9rem}.nav ul a{text-decoration:none;color:var(--mu)}.nav ul a:hover{color:var(--tx)}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:1.5px solid var(--line);color:var(--tx);cursor:pointer;font-size:.98rem}
+.btn.p{background:var(--am);border-color:var(--am);color:#241703}.btn.p:hover{background:#f6c570}.btn:hover{border-color:var(--mi)}
+@media(max-width:1050px){.nav ul{display:none}}
+.hero{padding:120px 0 60px;min-height:100svh;display:flex;flex-direction:column;justify-content:center;gap:50px;background:radial-gradient(900px 600px at 80% 30%,#14463a,transparent 70%),var(--bg)}
+.gcol{display:grid;justify-items:center;gap:14px}.gl{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:540px}.gl button{font:500 .78rem var(--m);color:var(--mu);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:5px 12px;cursor:pointer}.gl button[aria-pressed=true]{border-color:var(--am);color:var(--tx)}.hg{display:grid;grid-template-columns:1.05fr 1fr;gap:30px;align-items:center}.lower{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}.globe-box{position:relative;aspect-ratio:1/1;width:min(100%,540px);justify-self:center;touch-action:pan-y}#globe{width:100%;height:100%;display:block;cursor:grab}#globe.zm{border-radius:50%;border:1.5px solid rgba(127,209,174,.5)}.hud{position:absolute;font:.76rem/1.5 var(--m);color:var(--mi);pointer-events:none}.hud.tl{left:0;top:2%}.hud.br{right:0;bottom:2%;text-align:right}.hud span{color:#fff}.tick{position:absolute;width:18px;height:18px;border:1.5px solid rgba(127,209,174,.55);pointer-events:none}.tick.a{left:-6px;top:-6px;border-right:0;border-bottom:0}.tick.b{right:-6px;top:-6px;border-left:0;border-bottom:0}.tick.c{left:-6px;bottom:-6px;border-right:0;border-top:0}.tick.d{right:-6px;bottom:-6px;border-left:0;border-top:0}
+.kick{font:500 .85rem var(--m);color:var(--mi);margin-bottom:14px}
+h1{font:800 clamp(3rem,7vw,5.6rem)/.98 var(--d);letter-spacing:-.03em}
+.roles{font:600 clamp(1.3rem,2.6vw,1.8rem) var(--d);color:var(--am);margin:14px 0 28px;height:1.6em;transition:opacity .35s}
+.hero p.in{color:#c5dacf;max-width:34em;margin-bottom:26px}.acts{display:flex;flex-wrap:wrap;gap:12px}
+.show{position:relative;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card);aspect-ratio:16/10;width:100%}
+.show button{all:unset;display:block;width:100%;height:100%;cursor:zoom-in}.show img{width:100%;height:100%;object-fit:cover;transition:opacity .5s}
+.show figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 14px;background:linear-gradient(transparent,rgba(4,16,12,.92));font-size:.92rem;pointer-events:none}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:26px}.stats div{border-top:2px solid var(--am);padding-top:12px}
+.stats b{display:block;font:800 2.1rem/1.1 var(--d)}.stats span{color:var(--mu);font-size:.93rem}
+@media(max-width:900px){.hg,.lower{grid-template-columns:1fr}.gcol{order:-1}.globe-box{width:min(88vw,440px)}}
+.about{display:grid;grid-template-columns:300px 1fr;gap:50px;align-items:start}.about img{border-radius:16px;border:1px solid var(--line);width:100%;aspect-ratio:1/1.1;object-fit:cover;object-position:top}.about p{margin-bottom:15px;color:#c5dacf}
+@media(max-width:820px){.about{grid-template-columns:1fr}.about img{max-width:280px}}
+.role{border-left:2px solid var(--line);padding:0 0 38px 30px;position:relative;margin-left:6px}.role:last-child{padding-bottom:0}
+.role:before{content:"";position:absolute;left:-8px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--am)}
+.role small{font:500 .84rem var(--m);color:var(--mi)}.role ul{margin:12px 0 0 20px;color:#c5dacf;display:grid;gap:6px;max-width:52em}.role li::marker{color:var(--am)}
+.samples{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}.samples button{all:unset;cursor:zoom-in;width:230px;border:1px solid var(--line);border-radius:10px;overflow:hidden}.samples img{width:100%;height:100px;object-fit:cover}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{margin-bottom:8px;color:var(--am);font-size:1.08rem}.card p{color:#c5dacf;font-size:.96rem}
+.zg{display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:center}@media(max-width:900px){.zg{grid-template-columns:1fr}}
+.steps{list-style:none;display:grid;gap:10px;margin:18px 0}.steps li{padding:12px 16px;border:1px solid var(--line);border-radius:10px;color:var(--mu);transition:.3s}
+.steps li.on{border-color:var(--am);color:var(--tx);background:var(--card)}.steps b{color:var(--am);font-family:var(--m);margin-right:8px}
+.parcels{display:grid;grid-template-columns:repeat(10,1fr);gap:3px;padding:10px;background:#f1ecdc;border-radius:14px;position:relative}
+.parcels div{aspect-ratio:1;border-radius:3px;background:#cfc8b2;transition:all .6s}
+.parcels[data-s="1"] div{filter:blur(1.5px) sepia(.6);opacity:.75}.parcels[data-s="2"] div{background:transparent;border:1.5px solid #14463a}.parcels[data-s="3"] div,.parcels[data-s="4"] div{background:var(--z);border:1.5px solid rgba(0,0,0,.18)}
+.parcels em{position:absolute;right:12px;bottom:10px;background:#14463a;color:#fff;font:500 .8rem var(--m);padding:4px 10px;border-radius:999px;font-style:normal;opacity:0;transition:.4s}.parcels[data-s="4"] em{opacity:1}
+.note{font:.85rem var(--m);color:var(--mu);margin-top:8px}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.chips span{display:flex;gap:8px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:9px;padding:5px 12px 5px 6px;font-size:.9rem}.chips i{width:20px;height:20px;border-radius:5px}
+.info{margin-top:44px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}.info button{all:unset;display:block;cursor:zoom-in}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}.gal figure{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.gal button{all:unset;display:block;cursor:zoom-in;width:100%}.gal #g-zoning img{object-fit:contain;background:#fff}.gal img{width:100%;height:210px;object-fit:cover;object-position:top}.gal figcaption{padding:12px 14px;font:600 .98rem/1.3 var(--d)}.gal small{display:block;font:400 .78rem var(--m);color:var(--mu);margin-top:4px}
+h4{font:600 1.15rem var(--d);margin:40px 0 14px;color:var(--mi)}
+.pipe{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.pipe div{border:1px solid var(--line);border-radius:12px;padding:18px;background:var(--card);transition:.3s}.pipe div.on{border-color:var(--am);transform:translateY(-4px)}
+.pipe b{font:500 .8rem var(--m);color:var(--am)}.pipe h3{font-size:1.02rem;margin:6px 0}.pipe p{font-size:.88rem;color:var(--mu)}@media(max-width:900px){.pipe{grid-template-columns:1fr 1fr}}
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}.edu div{border-top:3px solid var(--mi);padding-top:12px}.edu small{font:.82rem var(--m);color:var(--mu)}.edu b{display:block;font-family:var(--d)}
+.cl{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:10px}.cl small{display:block;font:.8rem var(--m);color:var(--mi)}.cl a{text-decoration:none;font-weight:500;word-break:break-word}
+footer{padding:26px 0;color:var(--mu);font-size:.9rem;border-top:1px solid var(--line)}
+.lb{position:fixed;inset:0;z-index:100;background:#050e0b;display:none;grid-template-rows:auto 1fr}.lb.open{display:grid}
+.lb header{display:flex;justify-content:space-between;gap:12px;padding:12px 18px;border-bottom:1px solid var(--line)}.lb header div{display:flex;gap:8px}
+.lb button{font:inherit;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:7px 14px;border-radius:8px;cursor:pointer}
+.lbb{display:grid;grid-template-columns:1fr minmax(260px,360px);min-height:0}.stage{overflow:auto;padding:16px;position:relative}.stage .f{position:relative;width:fit-content;margin:auto}
+.stage img{max-width:100%;max-height:calc(100svh - 120px);pointer-events:none}.stage.z img{max-width:none;max-height:none;width:200%}.stage .sh{position:absolute;inset:0;z-index:2}
+.lt{padding:22px;overflow:auto;border-left:1px solid var(--line);color:#c5dacf;font-size:.97rem}.lt p{margin-bottom:12px}@media(max-width:860px){.lbb{grid-template-columns:1fr;grid-template-rows:1fr auto}.lt{max-height:34vh;border:0;border-top:1px solid var(--line)}}
+.ns,.ns *{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+@media print{section,.hero{display:none!important}body::after{content:"Printing is disabled. Please use Download CV.";display:block;padding:30px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style></head><body>
+<nav class="nav"><div class="w"><a class="logo" href="#top"><i>AR</i>Abdur Rahman</a>
+<ul><li><a href="#about">About</a></li><li><a href="#experience">Experience</a></li><li><a href="#expertise">Expertise</a></li><li><a href="#zoning">Zoning</a></li><li><a href="#remote">Remote Sensing</a></li><li><a href="#automation">Automation</a></li><li><a href="#projects">Projects</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li></ul>
+<a class="btn p" href="assets/Abdur_Rahman_CV.pdf" download style="padding:8px 16px">Download CV</a></div></nav>
+
+<header class="hero" id="top"><div class="w hg"><div>
+<p class="kick">Geospatial analysis, remote sensing, zoning and land use data</p>
+<h1>Abdur Rahman</h1><div class="roles" id="roles" aria-live="polite">GIS Analyst</div>
+<div class="acts"><a class="btn p" href="#projects">See projects</a><a class="btn" href="assets/Abdur_Rahman_CV.pdf" download>Download CV</a><a class="btn" href="#contact">Get in touch</a></div></div>
+<div class="gcol"><div class="globe-box"><canvas id="globe" role="img" aria-label="Rotating globe marking Pakistan, the USA and Canada, where I work"></canvas><div class="hud tl">CENTER<br>LAT <span id="lat">33.68° N</span><br>LON <span id="lon">73.05° E</span></div><div class="hud br">WORK AREAS<br>Pakistan, USA, Canada</div><i class="tick a"></i><i class="tick b"></i><i class="tick c"></i><i class="tick d"></i></div></div></div>
+<div class="w lower"><div class="stats"><div><b>2,000+</b><span>zoning and parcel maps digitized</span></div><div><b>90–95%</b><span>spatial accuracy across deliverables</span></div><div><b>3</b><span>GIS roles and internships</span></div><div><b>2023</b><span>working in GIS since</span></div></div><figure class="show ns"><button type="button" id="showBtn" aria-label="Open this map full size"><img id="showImg" alt="" draggable="false"></button><figcaption id="showCap"></figcaption></figure></div></header>
+
+<section id="about"><div class="w about"><img class="ns" src="assets/img/profile.jpg" alt="Portrait of Abdur Rahman" draggable="false"><div><h2>About</h2><p style="margin-top:18px">GIS Analyst with hands-on experience in spatial data management, remote sensing, satellite image processing, thematic mapping, and GIS-based modeling. Highly proficient in ArcMap, QGIS, Google Earth Engine (GEE), and Python-based automation, with practical expertise in flood suitability analysis, agricultural land suitability, groundwater assessment, site selection, property and parcel mapping, and zoning data. Skilled in NDVI, LULC analysis, georeferencing, digitization, thematic cartography, raster and vector processing, and spatial modeling. Successfully digitized 2,000+ zoning and parcel maps across the United States and Canada, supporting infrastructure planning, environmental assessment, agricultural development, disaster management, and energy-sector applications.</p></div></div></section>
+
+<section id="experience"><div class="w"><h2>Experience</h2><p class="lead">Open the work samples to see screenshots from the work itself.</p>
+<div class="role"><small>Sep 2025 to present</small><h3>GIS Analyst, Nook Office Solutions</h3><ul>
+<li>Digitized 2,000+ zoning and parcel maps, maintaining 90–95% spatial accuracy across all deliverables.</li><li>Run spatial analysis and thematic mapping in ArcGIS and QGIS for planning and development projects.</li><li>Manage digitization and georeferencing of complex, multi-source datasets.</li><li>Built a GIS data-extraction utility that speeds up finding city-level GIS directories and services (code on GitHub).</li><li>Turn spatial analysis into clear insights for technical and non-technical stakeholders.</li></ul>
+<div class="samples"><button data-open="symbology"><img src="" data-t="symbology" alt="Zoning code symbology in QGIS"></button><button data-open="qa"><img src="" data-t="qa" alt="Zoning data QA analysis"></button></div></div>
+<div class="role"><small>Mar 2024 to Aug 2024</small><h3>GIS Intern, ADC Office, Charsadda</h3><ul><li>Produced thematic maps and spatial reports that informed district-level planning.</li><li>Analyzed geospatial data to support administrative decisions.</li><li>Digitized, georeferenced and prepared spatial databases for district records.</li></ul></div>
+<div class="role"><small>May 2023 to Dec 2023</small><h3>GIS Intern, Khyber Pakhtunkhwa Oil &amp; Gas Company Ltd (KPOGCL)</h3><ul><li>Assisted with GIS mapping and spatial analysis for oil and gas exploration.</li><li>Prepared georeferenced maps and technical reports for exploration planning teams.</li><li>Worked with field-verified spatial datasets and gained exposure to GIS in the energy sector.</li></ul></div></div></section>
+
+<section id="expertise"><div class="w"><h2>Expertise</h2><p class="lead">Tools and methods I use day to day, with evidence in the sections below.</p><div class="grid">
+<div class="card"><h3>GIS software</h3><p>ArcMap, ArcGIS Pro, QGIS, Google Earth Engine, Agisoft Metashape, Global Mapper</p></div>
+<div class="card"><h3>QA / QC</h3><p>Dataset inspection, zoning attribute management, CRS correction, geometry fixing, topology checks, sliver, overlap and gap detection, attribute validation, shapefile to GeoJSON conversion</p></div>
+<div class="card"><h3>Geospatial analysis</h3><p>Zoning and parcel analysis, land-use mapping, cadastral digitization, georeferencing, hazard and flood mapping, site suitability, spatial interpolation</p></div>
+<div class="card"><h3>Remote sensing</h3><p>Satellite image processing and enhancement, NDVI and vegetation analysis, land use and land cover, watershed analysis</p></div>
+<div class="card"><h3>Automation</h3><p>Python scripting, GIS workflow automation, geospatial data processing, web-based GIS portal discovery across the USA and Canada</p></div>
+<div class="card"><h3>Field surveys</h3><p>Drone data processing, GPS and RTK, total station and leveling, open and closed traverse, Kobo Toolbox and ODK</p></div>
+<div class="card"><h3>Working style</h3><p>Cartographic design, report preparation, project management, communication, field coordination and documentation</p></div></div></div></section>
+
+<section id="zoning"><div class="w"><h2>Zoning parcel mapping and validation</h2><p class="lead">Transforming zoning maps into accurate GIS datasets through georeferencing, parcel digitization, zoning classification, and spatial validation for reliable planning data.</p>
+<div class="zg"><div><ol class="steps" id="zsteps"><li><b>1</b>Georeferencing: map alignment and RMS error control.</li><li><b>2</b>Digitization: parcel and zoning boundary creation.</li><li><b>3</b>Classification: ordinance-based zone code matching.</li><li><b>4</b>Validation: sliver, gap, overlap and attribute checks.</li></ol>
+<div class="chips"><span><i style="background:#5b7bd0"></i>A</span><span><i style="background:#f5d33f"></i>R1</span><span><i style="background:#f59a3a"></i>R2</span><span><i style="background:#6fb23f"></i>R3</span><span><i style="background:#e0494b"></i>C1</span></div><p class="note">Illustrative zoning classes: A, R1, R2, R3, C1.</p></div>
+<div><div class="parcels ns" id="parcels" data-s="1"><em>Accurate. Valid. Ready to use.</em></div><p class="note">Illustrative parcel map, not project data.</p></div></div>
+<h4>Real zoning work</h4><div class="gal ns" id="g-zoning"></div></div></section>
+
+<section id="remote"><div class="w"><h2>Remote sensing</h2><p class="lead">Satellite imagery, vegetation indices, land surface temperature and land cover classification, processed in GIS software and Google Earth Engine.</p><div class="gal ns" id="g-remote"></div></div></section>
+
+<section id="automation"><div class="w"><h2>GIS automation and QA/QC</h2><p class="lead">Python tools that remove repetitive production work, from finding a city's GIS source to delivering a checked layer.</p>
+<div class="pipe" id="pipe"><div><b>01</b><h3>Find the source</h3><p>Python tool locates city GIS portals, REST services and official zoning and parcel data.</p></div><div><b>02</b><h3>Extract</h3><p>Web-based GIS data extraction across the USA and Canada.</p></div><div><b>03</b><h3>Fix the geometry</h3><p>CRS correction and geometry fixing.</p></div><div><b>04</b><h3>Check</h3><p>Topology, slivers, overlaps, gaps and attribute consistency.</p></div><div><b>05</b><h3>Deliver</h3><p>Shapefiles converted to GeoJSON and ready for use.</p></div></div>
+<p class="note" style="margin-top:18px">Code is on GitHub: <a href="https://github.com/Abdur-Rahman19" target="_blank" rel="noopener">github.com/Abdur-Rahman19</a></p></div></section>
+
+<section id="projects"><div class="w"><h2>Projects</h2><p class="lead">Select any map to view it full size.</p>
+<h4>Water and hazards</h4><div class="gal ns" id="g-water"></div><h4>Land, climate and terrain</h4><div class="gal ns" id="g-land"></div>
+<h4>Other project work</h4><div class="grid"><div class="card"><h3>Suitable site selection</h3><p>Multi-criteria spatial analysis in ArcGIS using slope, land use, proximity to infrastructure and environmental constraints to rank sites.</p></div><div class="card"><h3>Watershed analysis</h3><p>Watershed boundaries and drainage patterns delineated from digital elevation models.</p></div><div class="card"><h3>Spatial data collection</h3><p>Field collection with GPS, RTK and structured survey methods.</p></div></div></div></section>
+
+<section id="education"><div class="w"><h2>Education</h2><p class="lead">Academic background.</p><div class="edu">
+<div><small>2021 to 2025</small><b>BS Geomatics (GIS and Remote Sensing)</b>University of Peshawar</div><div><small>2019 to 2021</small><b>Intermediate (Pre-Medical)</b>Ghazali Science College, Charsadda</div><div><small>2017 to 2019</small><b>Matriculation (Science)</b>Govt. Shaheed Rizwan Sareer Higher Secondary School, Utmanzai</div></div></div></section>
+
+<section id="contact"><div class="w"><h2>Contact</h2><p class="lead">Open to GIS, zoning data and remote sensing work.</p><div class="cl">
+<div><small>Email</small><a href="mailto:abdurrahman08384@gmail.com">abdurrahman08384@gmail.com</a></div><div><small>Phone</small><a href="tel:+923085971946">+92 308 5971946</a></div><div><small>LinkedIn</small><a href="https://linkedin.com/in/abdur-rahman-210835344" target="_blank" rel="noopener">linkedin.com/in/abdur-rahman-210835344</a></div><div><small>GitHub</small><a href="https://github.com/Abdur-Rahman19" target="_blank" rel="noopener">github.com/Abdur-Rahman19</a></div><div><small>Location</small>Islamabad, Pakistan</div></div></div></section>
+<footer><div class="w">© <span id="yr">2026</span> Abdur Rahman. GIS Analyst. All maps are my own work. Languages: English, Urdu, Pashto.</div></footer>
+
+<div class="lb ns" id="lb" hidden role="dialog" aria-modal="true"><header><h3 id="lt"></h3><div><button id="lz">Zoom in</button><button id="lc">Close</button></div></header>
+<div class="lbb"><div class="stage" id="st"><div class="f"><img id="li" alt="" draggable="false"><div class="sh"></div></div></div><div class="lt" id="ltx"></div></div></div>
+
+<script>
+const MAPS=[
+{id:'symbology',g:'zoning',t:'Zoning code symbology',tag:'QGIS, 16 zoning classes',x:['Standardizing municipal zoning data by classifying 16 distinct zoning vectors, covering residential, commercial, industrial and public open space categories, into a clear thematic symbology scheme in QGIS.','Custom vector layers sit over aerial imagery next to web GIS viewers, so density transitions, land-use distribution and boundary alignment can be audited against the built environment.']},
+{id:'qa',g:'zoning',t:'Zoning data QA analysis',tag:'QGIS, web parcel viewers',x:['A QA workflow that verifies zoning data by cross-referencing published web parcel viewers with custom QGIS vector classifications across agricultural, commercial, industrial, residential and open space zones.','New zoning layers are overlaid on satellite basemaps and official sources to catch boundary errors, fix symbology discrepancies and confirm alignment with land use.']},
+{id:'z1',g:'zoning',t:'',a:'Zoning map',tag:'',x:[]},
+{id:'z2',g:'zoning',t:'',a:'Zoning map',tag:'',x:[]},
+{id:'z3',g:'zoning',t:'',a:'Zoning map',tag:'',x:[]},
+{id:'z4',g:'zoning',t:'',a:'Zoning map',tag:'',x:[]},
+{id:'z5',g:'zoning',t:'',a:'Zoning map',tag:'',x:[]},
+{id:'groundwater',g:'water',t:'Groundwater potential, District Charsadda',tag:'Multiple Influence Factor',x:['Groundwater potential zones across District Charsadda, classified as Poor, Good, High and Very High.','Good covers the most area (about 547.66 km²), then High (308.70 km²), Poor (103.91 km²) and Very High (73.60 km²). High-potential areas are mainly in the north and centre.','Supports groundwater exploration, water management, site selection and supply planning.']},
+{id:'drainage',g:'water',t:'Hydrological drainage dynamics, Charsadda',tag:'DEM, stream order',x:['The stream network classified by stream order, with 1st and 2nd order feeder streams converging into major 4th and 5th order rivers.','Supports flood risk management, watershed planning and disaster response, and shows DEM processing, stream extraction and hydrological modeling.']},
+{id:'flood',g:'water',t:'Flood hazard zonation, District Nowshera',tag:'Hazard mapping',x:['High and low flood-prone areas across District Nowshera, with floodwater extent, settlements, roads and schools.','Helps identify vulnerable locations and the potential impact of flooding on communities and infrastructure.']},
+{id:'lulc',g:'land',t:'Land use and land cover, Charsadda (2024)',tag:'Satellite classification',x:['Land use and land cover of District Charsadda for 2024 from satellite imagery, with classes for vegetation, settlements, barren land, water bodies and graveyards.','Supports land use monitoring, urban development, environmental assessment and sustainable land management.']},
+{id:'lst',g:'land',t:'Gilgit River Basin land surface temperature, 2013 to 2018',tag:'Thermal remote sensing',x:['A six-year study of average annual land surface temperature in the Gilgit River Basin. Warmer values follow low river valleys; extreme lows mark high ridges and glaciated zones, from a high of 19.2°C in 2014 to a low of -14.8°C in 2015.','Shows raster processing, cartography and multi-temporal modeling for glacier tracking, climate assessment and hydrological modeling.']},
+{id:'ndvi',g:'land',t:'NDVI, Abbottabad District (2014)',tag:'Vegetation health',x:['NDVI for Abbottabad District in 2014. Green areas show healthy vegetation and forest, mostly central and western; red and orange areas show low vegetation, bare land or built-up areas, mostly in the east.']},
+{id:'gee',g:'land',t:'Remote sensing and environmental monitoring, Google Earth Engine',tag:'Google Earth Engine',x:['Satellite analysis in Google Earth Engine covering Pakistan\'s 2023 rainfall distribution, land surface temperature and land use and land cover classification.','Thematic maps and environmental patterns support climate monitoring, land-cover assessment and spatial decision making.']},
+{id:'kohat',g:'land',t:'Study area and elevation, District Kohat',tag:'Topography',x:['The location of District Kohat, Khyber Pakhtunkhwa, with an elevation map showing higher ground in the west and north and lower ground to the east and south.']}];
+const EX={};
+const IM=window.IMG||{},T=i=>IM[i]||`assets/maps/${i}-thumb.jpg`,F=i=>IM['f-'+i]||IM[i]||`assets/maps/${i}.jpg`,$=s=>document.getElementById(s);
+const card=m=>`<figure><button data-open="${m.id}" aria-label="Open ${m.t||m.a}"><img src="${T(m.id)}" alt="${m.t||m.a}" loading="lazy" draggable="false"></button>${m.t?`<figcaption>${m.t}<small>${m.tag}</small></figcaption>`:''}</figure>`;
+const put=(id,f)=>$(id).innerHTML=MAPS.filter(f).map(card).join('');
+put('g-zoning',m=>m.g==='zoning');put('g-water',m=>m.g==='water');put('g-land',m=>m.g==='land');put('g-remote',m=>['ndvi','lst','lulc','gee'].includes(m.id));
+document.querySelectorAll('[data-t]').forEach(i=>i.src=T(i.dataset.t));
+/* hero roles + showcase */
+const R=['GIS Analyst','Zoning Analyst','Remote Sensing Analyst','Geospatial Data Analyst'];let ri=0,si=0;const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const SH=['groundwater','lst','flood','lulc','drainage','ndvi'].map(i=>MAPS.find(m=>m.id===i));
+function show(){const m=SH[si%SH.length];$('showImg').src=T(m.id);$('showImg').alt=m.t;$('showCap').textContent=m.t;$('showBtn').dataset.open=m.id}
+show();if(!reduce)setInterval(()=>{ri++;$('roles').style.opacity=0;setTimeout(()=>{$('roles').textContent=R[ri%4];$('roles').style.opacity=1},350);if(ri%2===0){si++;show()}},2600);
+/* parcel animation */
+const Z=['#5b7bd0','#f5d33f','#f59a3a','#6fb23f','#e0494b'],P=$('parcels');
+for(let i=0;i<60;i++){const d=document.createElement('div');const r=i%10,c=Math.floor(i/10);d.style.setProperty('--z',Z[(Math.floor(r/3)+c*2+(r*c)%2)%5]);P.insertBefore(d,P.lastElementChild)}
+let zs=0;function zstep(){P.dataset.s=zs%4+1;[...$('zsteps').children].forEach((l,i)=>l.classList.toggle('on',i===zs%4));zs++}zstep();if(!reduce)setInterval(zstep,2200);
+/* pipeline */
+let pi=0;const pc=[...$('pipe').children];function pp(){pc.forEach((e,i)=>e.classList.toggle('on',i===pi%5));pi++}pp();if(!reduce)setInterval(pp,1800);
+pc.forEach((e,i)=>e.addEventListener('mouseenter',()=>{pi=i;pp()}));
+/* lightbox */
+const lb=$('lb'),st=$('st');let last;
+function open(k){const m=EX[k]||MAPS.find(x=>x.id===k);if(!m)return;last=document.activeElement;$('li').src=F(k);$('li').alt=m.t;$('lt').textContent=m.t;
+$('ltx').innerHTML=m.x.map(t=>`<p>${t}</p>`).join('')+'<p style="font-size:.85rem;color:#9db8ac">Map by Abdur Rahman. Please do not copy or reuse without permission.</p>';
+st.classList.remove('z');$('lz').textContent='Zoom in';st.scrollTo(0,0);lb.hidden=false;lb.classList.add('open');document.body.style.overflow='hidden';$('lc').focus()}
+function close(){lb.classList.remove('open');lb.hidden=true;document.body.style.overflow='';last&&last.focus()}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-open]');if(b)open(b.dataset.open)});$('lc').onclick=close;lb.addEventListener('click',e=>{if(e.target===lb)close()});
+$('lz').onclick=()=>{const z=st.classList.toggle('z');$('lz').textContent=z?'Fit to screen':'Zoom in'};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&lb.classList.contains('open'))close();const k=e.key.toLowerCase();
+if((e.ctrlKey||e.metaKey)&&['s','p','u','c'].includes(k)||e.key==='F12'||((e.ctrlKey||e.metaKey)&&e.shiftKey&&['i','j','c'].includes(k)))e.preventDefault()});
+['contextmenu','dragstart','selectstart','copy','cut'].forEach(v=>document.addEventListener(v,e=>{if(e.target.closest&&e.target.closest('img,.gal,.info,.lb,.about,.show'))e.preventDefault()}));
+$('yr').textContent=new Date().getFullYear();
+/* ---------- globe ---------- */
+(function(){
+const cv=document.getElementById('globe'),ctx=cv.getContext('2d');
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const latEl=document.getElementById('lat'),lonEl=document.getElementById('lon');
+const D2R=Math.PI/180;
+let W=0,H=0,R=0,R0=0,dpr=1,zoom=1,tz=1,tgt=null,sel=null;
+function size(){const r=cv.getBoundingClientRect();dpr=Math.min(2,devicePixelRatio||1);W=r.width;H=r.height;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);R0=Math.min(W,H)*0.33}
+addEventListener('resize',size);size();
+
+/* coarse land outlines (lon,lat) used until/unless detailed data loads */
+const COARSE=[
+ [[-168,66],[-160,70],[-140,70],[-125,70],[-95,72],[-80,70],[-62,60],[-55,52],[-66,45],[-70,42],[-76,35],[-81,30],[-80,25],[-84,30],[-90,29],[-97,26],[-97,21],[-90,21],[-87,21],[-88,16],[-83,10],[-78,8],[-80,8],[-86,12],[-92,15],[-105,20],[-112,28],[-115,30],[-110,23],[-117,32],[-124,40],[-124,48],[-135,58],[-150,60],[-165,60]],
+ [[-80,8],[-72,12],[-62,10],[-52,5],[-50,0],[-35,-5],[-39,-14],[-41,-22],[-48,-26],[-58,-38],[-65,-42],[-68,-52],[-72,-54],[-75,-48],[-73,-38],[-71,-30],[-70,-18],[-76,-14],[-81,-5]],
+ [[-17,21],[-10,30],[-6,36],[10,37],[20,33],[32,31],[35,28],[43,12],[51,12],[42,-1],[40,-15],[35,-25],[27,-34],[18,-34],[12,-18],[13,-6],[9,3],[5,5],[-8,4],[-17,14]],
+ [[-10,36],[-9,43],[-1,46],[-5,48],[3,51],[8,54],[10,58],[5,62],[15,69],[30,71],[60,70],[80,73],[105,78],[130,72],[160,70],[180,68],[180,65],[170,60],[160,55],[155,60],[143,59],[140,52],[135,43],[129,35],[122,40],[121,31],[120,25],[108,21],[106,10],[100,13],[104,1],[98,8],[97,17],[92,22],[80,15],[77,8],[73,20],[67,25],[57,25],[56,27],[50,30],[48,29],[56,24],[59,22],[52,16],[43,13],[35,28],[34,31],[36,36],[28,37],[26,40],[23,37],[19,40],[14,45],[12,44],[16,40],[9,44],[3,43],[-2,37]],
+ [[114,-22],[122,-18],[130,-12],[137,-12],[142,-11],[146,-19],[153,-26],[150,-37],[141,-38],[135,-34],[129,-32],[115,-34]],
+ [[-55,60],[-45,60],[-20,70],[-20,80],[-40,83],[-65,82],[-70,76]],
+ [[-5,50],[1,51],[2,53],[-2,57],[-5,58.5],[-6,55],[-3,54]],
+ [[130,31],[135,34],[141,38],[142,45],[145,44],[140,36],[131,33]],
+ [[95,5],[106,-6],[104,-6],[95,2]],[[109,2],[117,7],[119,1],[116,-4],[110,-3]],
+ [[44,-25],[50,-15],[49,-12],[44,-17]],
+ [[-180,-70],[180,-70],[180,-90],[-180,-90]]
+];
+/* land mask: equirectangular canvas, sampled for dots */
+const MW=720,MH=360,mc=document.createElement('canvas');mc.width=MW;mc.height=MH;
+const mx=mc.getContext('2d',{willReadFrequently:true});
+let mask=null,dots=[];
+function fillRings(rings){
+  mx.clearRect(0,0,MW,MH);mx.fillStyle='#000';
+  rings.forEach(r=>{mx.beginPath();r.forEach((p,i)=>{const x=(p[0]+180)/360*MW,y=(90-p[1])/180*MH;i?mx.lineTo(x,y):mx.moveTo(x,y)});mx.closePath();mx.fill()});
+  mask=mx.getImageData(0,0,MW,MH).data;buildDots();
+}
+function isLand(lon,lat){const x=Math.min(MW-1,Math.max(0,Math.floor((lon+180)/360*MW))),y=Math.min(MH-1,Math.max(0,Math.floor((90-lat)/180*MH)));return mask[(y*MW+x)*4+3]>128}
+function buildDots(){
+  dots=[];const step=2.4;
+  for(let lat=-86;lat<=86;lat+=step){
+    const k=Math.max(1,Math.cos(lat*D2R));const ls=step/k;
+    for(let lon=-180;lon<180;lon+=ls){const land=isLand(lon,lat);dots.push({lat,lon,land})}
+  }
+}
+fillRings(COARSE);
+/* try detailed land data (Natural Earth 110m via jsDelivr); keep coarse outlines if offline */
+fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/land-110m.json').then(r=>r.json()).then(t=>{
+  const sc=t.transform.scale,tr=t.transform.translate;
+  const arcs=t.arcs.map(a=>{let x=0,y=0;return a.map(p=>{x+=p[0];y+=p[1];return[x*sc[0]+tr[0],y*sc[1]+tr[1]]})});
+  const arc=i=>i>=0?arcs[i]:arcs[~i].slice().reverse();
+  const rings=[];
+  t.objects.land.geometries.forEach(g=>{
+    const polys=g.type==='Polygon'?[g.arcs]:g.arcs;
+    polys.forEach(poly=>poly.forEach(ring=>{let pts=[];ring.forEach(i=>{pts=pts.concat(arc(i))});rings.push(pts)}))
+  });
+  fillRings(rings);
+}).catch(()=>{});
+
+/* rotation state, start facing Pakistan */
+let rotLon=-73,rotLat=-24,vel=0.12,drag=null,t0=performance.now();
+const PLACES=[{n:'Islamabad',lat:33.68,lon:73.05,pk:1},{n:'Charsadda',lat:34.15,lon:71.74,pk:1},{n:'Nowshera',lat:34.02,lon:71.98,pk:1},{n:'Abbottabad',lat:34.15,lon:73.21,pk:1},{n:'Kohat',lat:33.59,lon:71.44,pk:1},{n:'Gilgit River Basin',lat:36.2,lon:74.3,pk:1},{n:'USA',lat:39.5,lon:-98.35,big:1},{n:'Canada',lat:48.5,lon:-85,big:1}];
+function proj(lat,lon){
+  const φ=lat*D2R,λ=(lon+rotLon)*D2R,φ0=rotLat*-D2R;
+  let x=Math.cos(φ)*Math.sin(λ),y=Math.sin(φ),z=Math.cos(φ)*Math.cos(λ);
+  const y2=y*Math.cos(φ0)-z*Math.sin(φ0),z2=y*Math.sin(φ0)+z*Math.cos(φ0);
+  return{x:x,y:y2,z:z2};
+}
+/* orbits: tilted rings with satellites */
+const ORB=[{rx:1.42,ry:.52,tilt:-24,sp:.0006,n:1,ph:0},{rx:1.62,ry:.4,tilt:32,sp:-.00042,n:2,ph:1.2}];
+function orbitPts(o,a){const c=Math.cos(o.tilt*D2R),s=Math.sin(o.tilt*D2R);const x=Math.cos(a)*o.rx,y=Math.sin(a)*o.ry;return{x:x*c-y*s,y:x*s+y*c,z:Math.sin(a)}}
+function drawOrbit(o,front){
+  ctx.beginPath();let on=false;
+  for(let a=0;a<=Math.PI*2+.05;a+=.05){const p=orbitPts(o,a);const isF=p.z>=0;if(isF===front){const X=W/2+p.x*R,Y=H/2-p.y*R;on?ctx.lineTo(X,Y):ctx.moveTo(X,Y);on=true}else on=false}
+  ctx.strokeStyle=front?'rgba(159,224,212,.55)':'rgba(159,224,212,.22)';ctx.lineWidth=1.1;ctx.stroke();
+}
+function drawSats(front,t){
+  ORB.forEach(o=>{for(let i=0;i<o.n;i++){const a=o.ph+t*o.sp*1000+i*Math.PI;const p=orbitPts(o,a);if((p.z>=0)!==front)continue;
+    const X=W/2+p.x*R,Y=H/2-p.y*R;ctx.beginPath();ctx.arc(X,Y,front?3.6:2.6,0,7);ctx.fillStyle=front?'#ffb36b':'rgba(255,179,107,.5)';ctx.fill();
+    if(front){ctx.beginPath();ctx.arc(X,Y,8,0,7);ctx.strokeStyle='rgba(255,179,107,.35)';ctx.stroke()}}})
+}
+function frame(now){
+  R=R0*zoom;ctx.clearRect(0,0,W,H);
+  const t=now-t0;
+  if(zoom<1.15){ORB.forEach(o=>drawOrbit(o,false));drawSats(false,t)}
+  /* globe body */
+  const g=ctx.createRadialGradient(W/2-R*.35,H/2-R*.4,R*.1,W/2,H/2,R*1.05);
+  g.addColorStop(0,'#14463a');g.addColorStop(1,'#08201a');
+  ctx.beginPath();ctx.arc(W/2,H/2,R,0,7);ctx.fillStyle=g;ctx.fill();
+  ctx.lineWidth=1.4;ctx.strokeStyle='rgba(143,227,212,.5)';ctx.stroke();
+  /* graticule */
+  ctx.lineWidth=.6;ctx.strokeStyle='rgba(143,227,212,.14)';
+  for(let lat=-60;lat<=60;lat+=30){ctx.beginPath();let on=false;for(let lon=-180;lon<=180;lon+=4){const p=proj(lat,lon);if(p.z>0){const X=W/2+p.x*R,Y=H/2-p.y*R;on?ctx.lineTo(X,Y):ctx.moveTo(X,Y);on=true}else on=false}ctx.stroke()}
+  for(let lon=-180;lon<180;lon+=30){ctx.beginPath();let on=false;for(let lat=-90;lat<=90;lat+=4){const p=proj(lat,lon);if(p.z>0){const X=W/2+p.x*R,Y=H/2-p.y*R;on?ctx.lineTo(X,Y):ctx.moveTo(X,Y);on=true}else on=false}ctx.stroke()}
+  /* dots */
+  for(const d of dots){const p=proj(d.lat,d.lon);if(p.z<=0)continue;const X=W/2+p.x*R,Y=H/2-p.y*R,a=Math.pow(p.z,.6);
+    if(d.land){ctx.fillStyle=`rgba(159,224,212,${.35+.65*a})`;ctx.fillRect(X-1,Y-1,2.1,2.1)}
+    else{ctx.fillStyle=`rgba(127,209,174,${.07+.1*a})`;ctx.fillRect(X-.6,Y-.6,1.2,1.2)}}
+  const pk=[];
+  PLACES.forEach(pl=>{const q=proj(pl.lat,pl.lon);if(q.z<=0.05)return;const X=W/2+q.x*R,Y=H/2-q.y*R,pulse=(Math.sin(t/380+pl.lon)+1)/2;pl._x=X;pl._y=Y;pl._z=q.z;
+    if(pl.big||pl.n==='Islamabad'){ctx.beginPath();ctx.arc(X,Y,5+pulse*9,0,7);ctx.strokeStyle=`rgba(240,180,76,${.8-pulse*.6})`;ctx.lineWidth=1.5;ctx.stroke()}
+    ctx.beginPath();ctx.arc(X,Y,pl.big?3.8:3.2,0,7);ctx.fillStyle='#f0b44c';ctx.fill();
+    ctx.font='500 12px "IBM Plex Mono",monospace';
+    if(pl.pk)pk.push(pl);else{ctx.globalAlpha=Math.min(1,q.z*2);ctx.fillStyle='#e8f2ec';ctx.fillText(pl.n,X+10,Y-9);ctx.globalAlpha=1}});
+  const vp=pk.filter(p=>p._z>.1).sort((a,b)=>a._y-b._y);
+  if(vp.length){const a=Math.min(1,(Math.min(...vp.map(p=>p._z))-.1)/.35),mxx=Math.max(...vp.map(p=>p._x)),mnx=Math.min(...vp.map(p=>p._x)),my=vp.reduce((s,p)=>s+p._y,0)/vp.length,left=mxx>W/2+40,lx=left?mnx-46:mxx+46;
+    ctx.globalAlpha=Math.max(0,a);ctx.font='500 12px "IBM Plex Mono",monospace';ctx.textAlign=left?'right':'left';
+    vp.forEach((p,i)=>{const ly=my+(i-(vp.length-1)/2)*21;ctx.beginPath();ctx.moveTo(p._x,p._y);ctx.lineTo(lx+(left?6:-6),ly-4);ctx.strokeStyle='rgba(232,242,236,.6)';ctx.lineWidth=1;ctx.stroke();ctx.fillStyle='#e8f2ec';ctx.fillText(p.n,lx,ly)});
+    ctx.fillStyle='#f0b44c';ctx.fillText('PAKISTAN',lx,my-(vp.length+1)*10.5-6);ctx.textAlign='left';ctx.globalAlpha=1}
+  /* atmosphere */
+  const ag=ctx.createRadialGradient(W/2,H/2,R*.96,W/2,H/2,R*1.14);ag.addColorStop(0,'rgba(127,209,174,.22)');ag.addColorStop(1,'rgba(127,209,174,0)');
+  ctx.beginPath();ctx.arc(W/2,H/2,R*1.14,0,7);ctx.fillStyle=ag;ctx.fill();
+  if(zoom<1.15){ORB.forEach(o=>drawOrbit(o,true));drawSats(true,t)}
+  /* readout */
+  const cl=((-rotLon+540)%360)-180;
+  latEl.textContent=Math.abs(-rotLat).toFixed(2)+'° '+(-rotLat>=0?'N':'S');
+  lonEl.textContent=Math.abs(cl).toFixed(2)+'° '+(cl>=0?'E':'W');
+}
+let raf;
+function loop(now){
+  if(tgt){rotLon+=(((-tgt.lon-rotLon)%360+540)%360-180)*.08;rotLat+=(-tgt.lat-rotLat)*.08;zoom+=(tz-zoom)*.08}
+  else{zoom+=(1-zoom)*.08;if(!drag&&!reduce)rotLon+=(Math.abs(((-rotLon-73)%360+540)%360-180)<26?.035:vel)}
+  cv.classList.toggle('zm',zoom>1.3);frame(now);raf=requestAnimationFrame(loop)}
+/* drag to rotate */
+cv.addEventListener('pointerdown',e=>{pick(null);drag={x:e.clientX,y:e.clientY};cv.setPointerCapture(e.pointerId)});
+cv.addEventListener('pointermove',e=>{if(!drag)return;rotLon+=(e.clientX-drag.x)*.35;rotLat=Math.max(-70,Math.min(70,rotLat-(e.clientY-drag.y)*.25));drag={x:e.clientX,y:e.clientY}});
+['pointerup','pointercancel'].forEach(ev=>cv.addEventListener(ev,()=>{drag=null}));
+/* pause when off-screen */
+new IntersectionObserver(es=>{es.forEach(en=>{cancelAnimationFrame(raf);if(en.isIntersecting)raf=requestAnimationFrame(loop)})}).observe(cv);
+function pick(){}
+if(reduce)frame(performance.now());
+})();
+</script></body></html>
